@@ -1,3 +1,6 @@
+#aboutdoyouspeakshort, #aboutitems, #aboutevents {
+  max-width: 582px;
+}
 .bublelink {
   position: relative;
   left: 35px;
