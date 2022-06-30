@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="stylesheets/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style media="screen">
+    body {
+      /* background: rgba(0, 0, 0, 0.5); */
+      background: white;
+    }
+    .itemsweetcardoverlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .itemsweetcard {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      width: 1125px;
+      height: 750px;
+      /* width: 78vw;
+      height: 750px; */
+      /* width: 62.5vw;
+      height: 600px; */
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      /* flex-wrap: wrap; */
+      justify-content: space-evenly;
+      /* align-items: center; */
+    }
+    .closebutton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 35px;
+      height: 35px;
+      background-color: transparent;
+      border-radius: 0 20px 0 10px;
+      stroke: black;
+    }
+    .closebutton:hover {
+      background-color: #FF3E91;
+      cursor: pointer;
+      stroke: white;
+    }
+    .pictures {
+      position: relative;
+      margin-top: 35px;
+      width: 680px;
+      height: 680px;
+      background-color: transparent;
+      overflow: hidden;
+    }
+    .swipepictures {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background-color: pink; */
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-start;
+    }
+    .picture1, .picture2, .picture3 {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+      display: inline-block;
+      object-fit: cover;
+      /* max-width: 100%;
+      height: auto; */
+    }
+    /* .swipepictures:hover {
+      transform: translateX(-100%);
+      transition: .5s;
+    }
+    .swipepictures, .swipepictures::after, .swipepictures::before {
+      transition: .3s all ease-in-out;
+    } */
+    .slidebuttons {
+      position: absolute;
+      left: calc(50% - 32px);
+      bottom: 0;
+      /* width: 64px; */
+      height: 16px;
+      /* background-color: grey; */
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row;
+    }
+    .circle1 {
+      width: 16px;
+      height: 16px;
+      background-color: black;
+      border-radius: 8px;
+    }
+    .circle2 {
+      margin-left: 8px;
+      width: 16px;
+      height: 16px;
+      background-color: #C4C4C4;
+      border-radius: 8px;
+    }
+    .circle3 {
+      margin-left: 8px;
+      width: 16px;
+      height: 16px;
+      background-color: #C4C4C4;
+      border-radius: 8px;
+    }
+    .circle1:hover {
+      cursor: pointer;
+    }
+    .circle2:hover {
+      cursor: pointer;
+    }
+    .circle3:hover {
+      cursor: pointer;
+    }
+    .textincard {
+      position: relative;
+      /* margin-left: 35px; */
+      width: 305px;
+    }
+    .headline {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 49px;
+      margin-top: 35px;
+    }
+    .vkus, .lang, .characteristics {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 33px;
+    }
+    .descriptionmain {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      position: relative;
+      margin-top: 30px;
+    }
+    .options {
+      position: relative;
+      display: inline-flex;
+    }
+    .languages {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .options {
+      margin-top: 35px;
+    }
+    .languages {
+      margin-top: 10px;
+    }
+    .characteristics {
+      margin-top: 35px;
+    }
+    .coloroptions {
+      position: relative;
+      /* top: 100px; */
+      margin-left: 50px;
+      width: 110px;
+      height: 30px;
+      display: flex;
+      justify-content: flex-start;
+      flex-flow: row;
+    }
+    .colour1 {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      /* background-color: #FF3E91; */
+      display: inline-block;
+    }
+    .colour2 {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      /* background-color: #3423E9; */
+      display: inline-block;
+    }
+    .colour3 {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      /* background-color: #FFD214; */
+      display: inline-block;
+    }
+    .colour1:hover {
+      cursor: pointer;
+    }
+    .colour2:hover {
+      cursor: pointer;
+    }
+    .colour3:hover {
+      cursor: pointer;
+    }
+    select {
+      position: relative;
+      /* margin-left: 10px; */
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      border: none;
+      width: 100%;
+      height: 30px;
+      /* padding: 4px 8px 6px; */
+      padding-left: 15px;
+      background-color: #F1F3F4;
+      border-radius: 15px;
+      outline: none;
+    }
+    select:hover {
+      cursor: pointer;
+    }
+    /* .priceincard {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 49px;
+      text-align: center;
+      position: relative;
+      margin-top: 70px;
+    }
+    .cartandbuy {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    .buttoncart {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 139px;
+      height: 35px;
+      background-color: pink;
+      border-radius: 20px 20px 0 0;
+    }
+    .buttonbuy {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 35px;
+      background-color: green;
+      border-radius: 20px 20px 0 0;
+    } */
+    .priceandbuttoncart {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row;
+      width: 100%;
+    }
+    .priceincard {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 49px;
+      /* text-align: center;
+      position: relative;
+      margin-top: 70px; */
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      height: 70px;
+      vertical-align: middle;
+    }
+    .buttoncart {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 22px;
+      text-align: center;
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      /* width: 100%; */
+      width: 200px;
+      height: 70px;
+      background-color: #FF3E91;
+      border-radius: 20px 0 20px 0;
+      /* display: inline-block; */
+      display: flex;
+      justify-content: space-evenly;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .buttoncart:hover {
+      cursor: pointer;
+      background-color: #4ACDFF;
+    }
+    .cartnotification {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      /* line-height: 49px; */
+      line-height: 62px;
+      text-align: center;
+      /* vertical-align: middle; */
+      position: absolute;
+      display: block;
+      z-index: 1000;
+      top: 17px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 466px;
+      height: 70px;
+      background-color: white;
+      box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.12);
+      border-radius: 20px;
+      /* padding:  10px 50px 10px 50px; */
+      animation: notificationmove .5s linear;
+    }
+    @keyframes notificationmove {
+      0% { transform: translateZ(0); }
+      100% { transform: translateZ(-100%); }
+    }
+    .hidden {
+      display: none;
+    }
+    .fade {
+      animation: fade .1s linear;
+    }
+    @keyframes fade {
+      0% { transform: scale(1);}
+      100% { transform: scale(1.03);}
+    }
+    .fadeout {
+      animation: fadeout .1s linear;
+    }
+    @keyframes fadeout {
+      0% { transform: scale(1);}
+      100% { transform: scale(0.97);}
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.12);
+    }
+    .card:hover {
+      cursor: pointer;
+      background-color: #FF3E91;
+    }
+    .button1 {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: #4ACDFF;
+    }
+    .button2 {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: #FFD214;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".circle1").click(function(){
+        $(".circle1").css("background-color","black");
+        $(".circle2, .circle3").css("background-color","#C4C4C4");
+        $(".swipepictures").css("transform","translateX(0)");
+        $(".swipepictures").css("transition",".8s");
+      });
+    });
+    $(document).ready(function(){
+      $(".circle2").click(function(){
+        $(".circle2").css("background-color","black");
+        $(".circle1, .circle3").css("background-color","#C4C4C4");
+        $(".swipepictures").css("transform","translateX(-100%)");
+        $(".swipepictures").css("transition",".8s");
+      });
+    });
+    $(document).ready(function(){
+      $(".circle3").click(function(){
+        $(".circle3").css("background-color","black");
+        $(".circle1, .circle2").css("background-color","#C4C4C4");
+        $(".swipepictures").css("transform","translateX(-200%)");
+        $(".swipepictures").css("transition",".8s");
+      });
+    });
+    $(document).ready(function(){
+    	$(".colour1").click(function(){
+    		$(".colour1").css("border-radius","15px");
+        $(".colour2, .colour3").css("border-radius","10px");
+        $(".swipepictures").css("transform","translateX(0)");
+        $(".circle1").css("background-color","black");
+        $(".circle2, .circle3").css("background-color","#C4C4C4");
+        $(".swipepictures").css("transition",".8s");
+    	});
+    });
+    $(document).ready(function(){
+      $(".colour2").click(function(){
+        $(".colour2").css("border-radius","15px");
+        $(".colour1, .colour3").css("border-radius","10px");$(".circle2").css("background-color","black");
+        $(".swipepictures").css("transform","translateX(-100%)");
+        $(".circle2").css("background-color","black");
+        $(".circle1, .circle3").css("background-color","#C4C4C4");
+        $(".swipepictures").css("transition",".8s");
+      });
+    });
+    $(document).ready(function(){
+      $(".colour3").click(function(){
+        $(".colour3").css("border-radius","15px");
+        $(".colour1, .colour2").css("border-radius","10px");
+        $(".swipepictures").css("transform","translateX(-200%)");
+        $(".circle3").css("background-color","black");
+        $(".circle1, .circle2").css("background-color","#C4C4C4");
+        $(".swipepictures").css("transition",".8s");
+      });
+    });
+    $(document).ready(function(){
+      $(".buttoncart, .button2").click(function(){
+        setTimeout(function() {
+          $(".cartnotification").addClass("fade");
+          $(".cartnotification").removeClass("hidden");
+          setTimeout(function() {
+            $(".cartnotification").css("top", "-100px");
+            $(".cartnotification").css("transition",".8s");
+          }, 1700);
+        }, 500);
+        $(".cartnotification").addClass("hidden");
+        $(".cartnotification").css("top", "17px");
+      });
+    });
+    $(document).ready(function(){
+      $(".closebutton").click(function(){
+        // $(".itemsweetcard").addClass("fadeout");
+        $(".itemsweetcard, .itemsweetcardoverlay").addClass("hidden");
+        // $(".itemsweetcard").css("display", "none");
+        $(".itemsweetcard").css("transition",".8s");
+        $(".swipepictures").css("transform","translateX(0)");
+        $(".circle1").css("background-color","black");
+        $(".circle2, .circle3").css("background-color","#C4C4C4");
+        $(".colour1").css("border-radius","15px");
+        $(".colour2, .colour3").css("border-radius","10px");
+      });
+    });
+    $(document).ready(function(){
+      $(".button1").click(function(){
+        $("#card1, #overlay1").removeClass("hidden");
+        // $(".itemsweetcard").addClass("fade");
+        // $(".itemsweetcard").css("display", "none");
+        // $(".itemsweetcard").css("transition",".8s");
+      });
+    });
+    $(document).ready(function(){
+      $("#c2").click(function(){
+        $("#card2, #overlay2").removeClass("hidden");
+        // $(".itemsweetcard").addClass("fade");
+        // $(".itemsweetcard").css("display", "none");
+        // $(".itemsweetcard").css("transition",".8s");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="card" id="c1">
+    <div class="button1"></div>
+    <div class="button2"></div>
+  </div>
+  <div class="itemsweetcardoverlay hidden" id="overlay1">
+    <div class="itemsweetcard hidden" id="card1">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitsw3.png" alt="">
+          <img class="picture2" src="images/imitsw3.1.png" alt="">
+          <img class="picture2" src="images/imitsw3.2.png" alt="">
+        </div>
+      <div class="slidebuttons">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+      </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Леденец <br>на палочке,<br> в ассортименте</div>
+        <div class="options">
+          <p class="vkus">вкус:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FF3E91;"></div>
+            <div class="colour2" style="background-color: #3423E9;"></div>
+            <div class="colour3" style="background-color: #FFD214;"></div>
+          </div>
+        </div>
+        <div class="languages">
+          <p class="lang">язык:</p>
+          <select class="" name="type">
+            <option value="английский">английский</option>
+            <option value="русский">русский</option>
+            <option value="французский">французский</option>
+            <option value="немецкий">немецкий</option>
+            <option value="китайский">китайский</option>
+            <option value="японский">японский</option>
+            <option value="итальянский">итальянский</option>
+            <option value="турецкий">турецкий</option>
+            <option value="вьетнамский">вьетнамский</option>
+            <option value="испанский">испанский</option>
+          </select>
+        </div>
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Калорийность:	375 <br>
+            Углеводы на 100 г, г:	97 <br>
+            Масса нетто, кг:	0.07 <br>
+            Ингредиенты:	вода, сахар, патока, лимонная кислота, натуральный краситель кармин, ароматизатор идентичный натуральному <br>
+            Размер, мм:	20 x 15 x 10</div>
+        </div>
+        <div class="priceincard">149₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="card" id="c2"></div>
+  <div class="itemsweetcardoverlay hidden" id="overlay2">
+    <div class="itemsweetcard hidden" id="card2">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitmrch2.png" alt="">
+          <img class="picture2" src="images/imitmrch2.1.png" alt="">
+        </div>
+      <div class="slidebuttons">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+      </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Чехол
+          <br>для телефона,
+          <br>в ассортименте
+        </div>
+        <div class="options">
+          <p class="vkus">цвет:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FFD214;"></div>
+            <div class="colour2" style="background-color: #FF3E91;"></div>
+          </div>
+        </div>
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Материал: силикон</div>
+        </div>
+        <!-- <div class="priceincard">149₽</div>
+        <div class="cartandbuy">
+          <div class="buttoncart">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.28528 8.82761C0.683368 7.50341 1.65143 6 3.10601 6H18.894C20.3486 6 21.3166 7.50341 20.7147 8.82761L17.5329 15.8276C17.2084 16.5416 16.4965 17 15.7122 17H6.28783C5.50354 17 4.79163 16.5416 4.46709 15.8276L1.28528 8.82761Z" fill="white"/>
+              <path d="M9.0647 2.36719C8.51241 2.36719 8.0647 1.91947 8.0647 1.36719C8.0647 0.814903 8.51241 0.367188 9.0647 0.367188L13.0131 0.367187C13.5654 0.367187 14.0131 0.814903 14.0131 1.36719C14.0131 1.91947 13.5654 2.36719 13.0131 2.36719L9.0647 2.36719Z" fill="white"/>
+              <rect width="1.99525" height="11.4143" rx="0.997624" transform="matrix(0.865337 0.501191 -0.49881 0.866711 8.6936 0)" fill="white"/>
+              <rect width="1.99525" height="11.4151" rx="0.997624" transform="matrix(0.865337 -0.501191 0.49881 0.866711 11.76 1)" fill="white"/>
+            </svg>
+            <p>в корзину</p>
+          </div>
+          <div class="buttonbuy">купить</div>
+        </div> -->
+        <!-- <div class="priceandbuttoncart">
+          <div class="priceincard">149₽</div>
+          <div class="buttoncart">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.28528 8.82761C0.683368 7.50341 1.65143 6 3.10601 6H18.894C20.3486 6 21.3166 7.50341 20.7147 8.82761L17.5329 15.8276C17.2084 16.5416 16.4965 17 15.7122 17H6.28783C5.50354 17 4.79163 16.5416 4.46709 15.8276L1.28528 8.82761Z" fill="white"/>
+              <path d="M9.0647 2.36719C8.51241 2.36719 8.0647 1.91947 8.0647 1.36719C8.0647 0.814903 8.51241 0.367188 9.0647 0.367188L13.0131 0.367187C13.5654 0.367187 14.0131 0.814903 14.0131 1.36719C14.0131 1.91947 13.5654 2.36719 13.0131 2.36719L9.0647 2.36719Z" fill="white"/>
+              <rect width="1.99525" height="11.4143" rx="0.997624" transform="matrix(0.865337 0.501191 -0.49881 0.866711 8.6936 0)" fill="white"/>
+              <rect width="1.99525" height="11.4151" rx="0.997624" transform="matrix(0.865337 -0.501191 0.49881 0.866711 11.76 1)" fill="white"/>
+            </svg>
+            <p>в корзину</p>
+          </div>
+        </div> -->
+        <div class="priceincard">500₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+  <div class="cartnotification hidden">добавлено в корзину</div>
+</body>
+</html>

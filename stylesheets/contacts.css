@@ -1,0 +1,157 @@
+.contactsbuble {
+  position: relative;
+  left: 35px;
+  margin-top: 140px;
+}
+.writemessagebuble {
+  position: relative;
+  left: 35px;
+  margin-top: 35px;
+}
+.contacts, .writemessage {
+  position: absolute;
+  /* margin: 0 auto; */
+  margin-left: 35px;
+  margin-top: 18px;
+  text-align: center;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  display: block;
+  /* width: 80px;
+  height: 35px; */
+/*   margin-top: 109px; */
+/*   padding: 17px 40px 17px 40px; */
+  color: white;
+}
+input[type="text"], input[type="email"] {
+  position: absolute;
+  /* margin-top: 35px; */
+  right: 35px;
+  width: 100%;
+  max-width: 500px;
+  height: 70px;
+  display: block;
+  padding: 0 35px;
+  border-radius: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.12));
+  border: none;
+}
+input::placeholder {
+  color: #C4C4C4;
+}
+input:focus {
+  outline: none;
+}
+/* textarea {
+  position: relative;
+  margin-top: 35px;
+  left: 35px;
+  width: 100%;
+  max-width: 500px;
+  min-height: 70px;
+  height: 70px;
+  display: block;
+  padding: 17px 35px;
+  border-radius: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.12));
+  border: none;
+}
+textarea::placeholder {
+  color: #C4C4C4;
+} */
+.writeandsendmessage {
+  position: relative;
+  /* margin-top: 192px; */
+  top: 192px;
+  /* margin-left: 35px; */
+  /* left: 35px; */
+  /* width: calc(100% - 70px); */
+  width: 100%;
+  max-width: calc(100% - 35px);
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.messagewritting {
+  /* width: calc(100% - 105px); */
+  /* max-width: calc(100% - 105px); */
+  max-width: calc(100% - 140px);
+  width: 100%;
+  /* max-width: 1265px; */
+  height: 100%;
+  min-height: 35px;
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.12);
+  /* padding: 17px 35px; */
+  padding-left: 35px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  /* position: relative;
+  margin-top: 35px; */
+}
+.messagewritting textarea {
+  width: calc(100% - 35px);
+  /* width: auto; */
+  max-width: calc(100% - 35px);
+  /* max-width: auto; */
+  min-height: 33px;
+  height: 33px;
+  display: block;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  border: none;
+  outline-color: #C4C4C4;
+  margin-right: 35px;
+}
+.messagewritting textarea::placeholder {
+  color: #C4C4C4;
+}
+form {
+  position: relative;
+  /* display: flex;
+  justify-content: flex-end; */
+  /* justify-content: space-between; */
+  width: calc(100% - 70px);
+  height: auto;
+  margin: 0 auto;
+  left: 35px;
+  /* display: block; */
+  margin-top: 35px;
+  /* margin-bottom: 250px; */
+}
+input[type="submit"] > svg {
+  position: absolute;
+  margin-top: 10px;
+}
+.sendmessagebutton > button {
+  outline: none;
+  border: none;
+}
+.sendmessagebutton:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+.sendmessagebutton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.nameandmail {
+  position: relative;
+}

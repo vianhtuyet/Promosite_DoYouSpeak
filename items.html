@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="javascript/script.js"></script>
+  <title>Каталог | Do You Speak</title>
+</head>
+<body>
+  <div class="header">
+    <div class="menu-items">
+      <a class="logo" href="index.html"></a>
+      <a id="about" href="about.html">о нас</a>
+      <a id="catalogue" href="items.html">каталог</a>
+      <a id="events" href="events.html">события</a>
+      <!-- <a id="shop" href="shop.html">магазин</a> -->
+      <a id="contacts" href="contacts.html">контакты</a>
+      <a class="shoppingcart" href="">
+        <svg class="carthahaha" width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- <div class="catalogue">каталог</div> -->
+  <!-- <div class="catalogbuble">
+    <p class="catalog">каталог</p>
+    <svg width="252" height="70" viewBox="0 0 252 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 69.6484L27.8073 29L43.8387 44.3388L0 69.6484Z" fill="#FF3E91"/>
+      <rect width="252" height="70" rx="35" fill="#FF3E91"/>
+    </svg>
+  </div> -->
+  <div class="headlinebuble" style="margin-top: 140px;">
+    <p class="textheadline">каталог</p>
+    <svg width="161" height="70" viewBox="0 0 161 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.0761719 70.0003L19.5413 41.5464L30.7633 52.2835L0.0761719 70.0003Z" fill="#FF3E91"/>
+      <rect width="161" height="70" rx="35" transform="matrix(-1 0 0 1 161 0)" fill="#FF3E91"/>
+    </svg>
+  </div>
+  <div class="headlinebuble" style="margin-top: 100px;">
+    <p class="textheadline">сладости</p>
+    <svg width="180" height="70" viewBox="0 0 180 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.0761719 70.0003L19.5413 41.5464L30.7633 52.2835L0.0761719 70.0003Z" fill="black"/>
+      <rect width="180" height="70" rx="35" transform="matrix(-1 0 0 1 180 0)" fill="black"/>
+    </svg>
+  </div>
+
+  <!-- <div class="headlinebuble">
+    <p class="textinbuble">сладости</p>
+    <svg width="283" height="70" viewBox="0 0 283 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.10352e-05 70L27.8073 29.3516L43.8388 44.6903L6.10352e-05 70Z" fill="black"/>
+      <rect width="283" height="70" rx="35" transform="matrix(-1 0 0 1 283 0)" fill="black"/>
+    </svg>
+  </div> -->
+  <!-- <h1>сладости</h1> -->
+
+  <div class="sweet-items">
+    <div class="im1">
+      <!-- <img class="im1-img" src="images/sweetitemimage.png" alt=""> -->
+    </div>
+    <div class="itemsweet" id="itsw1">
+      <div class="itemsweetimage" id="imitsw1">
+        <div class="itemsweetslide">
+          <img class="imagenohover" src="images/imitsw1.svg" alt="">
+          <img class="imagehover" src="images/imitsw1.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm1">Жевательные конфеты, <br>в ассортименте</div>
+        <div class="mini-languages"></div>
+      </div>
+      <div class="priceandcart">
+        <div class="price">330₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+    <div class="itemsweet" id="itsw2">
+      <div class="itemsweetimage" id="imitsw2">
+        <div class="itemsweetslide">
+          <img class="imagenohover" src="images/imitsw2.svg" alt="">
+          <img class="imagehover" src="images/imitsw2.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm2">Шоколадный батончик, <br>в ассортименте</div>
+        <div class="mini-languages"></div>
+      </div>
+      <div class="priceandcart">
+        <div class="price">199₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+    <div class="itemsweet" id="itsw3">
+      <div class="itemsweetimage" id="imitsw3">
+        <div class="itemsweetslide">
+          <img class="imagenohover" src="images/imitsw3.png" alt="">
+          <img class="imagehover" src="images/imitsw3.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm3">Леденец на палочке, <br>в ассортименте</div>
+        <div class="mini-languages"></div>
+      </div>
+      <div class="priceandcart">
+        <div class="price">149₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+    <div class="itemsweet" id="itsw4">
+      <div class="itemsweetimage" id="imitsw4">
+        <div class="itemsweetslide">
+          <img class="imagenohover" src="images/imitsw4.png" alt="">
+          <img class="imagehover" src="images/imitsw4.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm4">Леденцы, в ассортименте</div>
+        <div class="mini-languages"></div>
+      </div>
+      <div class="priceandcart">
+        <div class="price">229₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="headlinebuble">
+    <p class="textinbuble">мерч</p>
+    <svg width="198" height="70" viewBox="0 0 198 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.10352e-05 70L27.8073 29.3516L43.8388 44.6903L6.10352e-05 70Z" fill="black"/>
+      <rect width="198" height="70" rx="35" transform="matrix(-1 0 0 1 198 0)" fill="black"/>
+    </svg>
+  </div> -->
+  <!-- <h1>мерч</h1> -->
+  <div class="headlinebuble" style="margin-top: 100px;">
+    <p class="textheadline">мерч</p>
+    <svg width="129" height="70" viewBox="0 0 129 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.0761719 70.0003L19.5413 41.5464L30.7633 52.2835L0.0761719 70.0003Z" fill="black"/>
+      <rect width="129" height="70" rx="35" transform="matrix(-1 0 0 1 129 0)" fill="black"/>
+    </svg>
+  </div>
+
+  <div class="merch-items">
+    <div class="itemmerch" id="itmrch1">
+      <div class="itemmerchimage" id="imitmrch1">
+        <div class="itemmerchslide">
+          <img class="imagenohover" src="images/imitmrch1.png" alt="">
+          <img class="imagehover" src="images/imitmrch1.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm5">Мини-сумка</div>
+        <!-- <div class="mini-options"></div> -->
+      </div>
+      <div class="priceandcart">
+        <div class="price">600₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+    <div class="im2"></div>
+    <div class="itemmerch" id="itmrch2">
+      <div class="itemmerchimage" id="imitmrch2">
+        <div class="itemmerchslide" id="itmrchsld4">
+          <img class="imagenohover" src="images/imitmrch2.png" alt="">
+          <img class="imagehover" src="images/imitmrch2.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm6">Чехол для телефона, в ассортименте</div>
+        <div class="mini-options"></div>
+      </div>
+      <div class="priceandcart">
+        <div class="price">500₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+    <div class="itemmerch" id="itmrch3">
+      <div class="itemmerchimage" id="imitmrch3">
+        <div class="itemmerchslide">
+          <img class="imagenohover" src="images/imitmrch3.png" alt="">
+          <img class="imagehover" src="images/imitmrch3.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm7">Блокнот</div>
+        <!-- <div class="mini-options"></div> -->
+      </div>
+      <div class="priceandcart">
+        <div class="price">250₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+    <div class="itemmerch" id="itmrch4">
+      <div class="itemmerchimage" id="imitmrch4">
+        <div class="itemmerchslide" id="itmrchsld4">
+          <img class="imagenohover" src="images/imitmrch4.png" alt="">
+          <img class="imagehover" src="images/imitmrch4.1.png" alt="">
+        </div>
+      </div>
+      <div class="itemnameandlanguages">
+        <div class="itemname" id="itnm8">Носки, в ассортименте</div>
+        <!-- <div class="mini-options"></div> -->
+      </div>
+      <div class="priceandcart">
+        <div class="price">199₽</div>
+        <div class="cart">
+          <div class="iconcartbutton"></div>
+          <div class="carttext">в корзину</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="runningline"></div>
+  <!-- <div class="footer">
+    <div class="footercontacts">
+      <div class="footercontactsheadline">Контактная информация</div>
+      <div class="footercontactsbody">+7 (961) 762-12-03
+<br>info@doyouspeak.com</div>
+    </div>
+    <div class="footeraddress">
+      <div class="footeraddressheadline">Адрес</div>
+      <div class="footeraddressbody">г. Москва, Малая Пионерская, 12</div>
+    </div>
+    <div class="footerlogo"></div>
+    <div class="doyouspeakandname">
+      <div class="doyouspeak"></div>
+      <div class="name"></div>
+    </div>
+  </div> -->
+
+  <div class="footer">
+    <div class="footer1row">
+      <div class="footercontacts">
+        <div class="footercontactsheadline">Контактная информация</div>
+        <div class="footercontactsbody">+7 (961) 762-12-03
+  <br>info@doyouspeak.com</div>
+      </div>
+      <div class="footeraddress">
+        <div class="footeraddressheadline">Адрес</div>
+        <div class="footeraddressbody">г. Москва, Малая Пионерская, 12</div>
+      </div>
+      <div class="footerlogo"></div>
+    </div>
+    <div class="doyouspeakandname">
+      <div class="doyouspeak">© 2021-2022 DOYOUSPEAK</div>
+      <div class="name">by Vi Anh Tuyet</div>
+    </div>
+  </div>
+
+  <!-- <div class="buble">
+    <p class="catalog">каталог</p>
+    <svg width="252" height="70" viewBox="0 0 252 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 69.6484L27.8073 29L43.8387 44.3388L0 69.6484Z" fill="#FF3E91"/>
+      <rect width="252" height="70" rx="35" fill="#FF3E91"/>
+    </svg>
+  </div>
+  <div class="product-loop"></div>
+  <div class="container">
+    <div class="loop-product">
+      <img class="imghahaha" src="images/imitmrch1.png" alt="">
+      <img class="img-hover" src="images/imitmrch2.png" alt="">
+    </div>
+  </div> -->
+
+  <div class="cartnotification hidden">добавлено в корзину</div>
+
+  <div class="itemsweetcardoverlay hidden" id="overlay1">
+    <div class="itemsweetcard " id="card1">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitsw1.svg" alt="">
+          <img class="picture2" src="images/imitsw1.1.png" alt="">
+        </div>
+        <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Жевательные конфеты, <br>в ассортименте</div>
+        <!-- <div class="options">
+          <p class="vkus">вкус:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FF3E91;"></div>
+            <div class="colour2" style="background-color: #3423E9;"></div>
+          </div>
+        </div> -->
+        <div class="languages" style="margin-top: 35px;">
+          <p class="lang">язык:</p>
+          <select class="" name="type">
+            <option value="английский">английский</option>
+            <option value="русский">русский</option>
+            <option value="французский">французский</option>
+            <option value="немецкий">немецкий</option>
+            <option value="китайский">китайский</option>
+            <option value="японский">японский</option>
+            <option value="итальянский">итальянский</option>
+            <option value="турецкий">турецкий</option>
+            <option value="вьетнамский">вьетнамский</option>
+            <option value="испанский">испанский</option>
+          </select>
+        </div>
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Размер, см: 11 x 6 x 6 <br>
+            Масса нетто, кг: 0.6 <br>
+            Ингредиенты: сироп глюкозный; сахар-песок; желирующий агент: желатин; декстроза; соки фруктовые концентрированные: яблочный, малиновый, клубничный, апельсиновый, лимонный, ананасовый и др.
+          </div>
+        </div>
+        <div class="priceincard">330₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="itemsweetcardoverlay hidden" id="overlay2">
+    <div class="itemsweetcard " id="card2">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitsw2.01.svg" alt="">
+          <img class="picture2" src="images/imitsw2.02.svg" alt="">
+        </div>
+        <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Шоколадный батончик, <br>в ассортименте</div>
+        <!-- <div class="options">
+          <p class="vkus">вкус:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FF3E91;"></div>
+            <div class="colour2" style="background-color: #3423E9;"></div>
+          </div>
+        </div> -->
+        <div class="languages" style="margin-top: 35px;">
+          <p class="lang">язык:</p>
+          <select class="" name="type">
+            <option value="английский">английский</option>
+            <option value="русский">русский</option>
+            <option value="французский">французский</option>
+            <option value="немецкий">немецкий</option>
+            <option value="китайский">китайский</option>
+            <option value="японский">японский</option>
+            <option value="итальянский">итальянский</option>
+            <option value="турецкий">турецкий</option>
+            <option value="вьетнамский">вьетнамский</option>
+            <option value="испанский">испанский</option>
+          </select>
+        </div>
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Размер, мм:	145 x 47 x 18 <br>
+Ингредиенты: Сахар, заменитель какао масла, дезодорированный пальмаядровый стеарин, эмульгаторы, стабилизатор, жир кондитерский, растительное масло, эмульгатор лецитин соевый, какао порошок, молоко цельное сухое, соль
+          </div>
+        </div>
+        <div class="priceincard">199₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="itemsweetcardoverlay hidden" id="overlay3">
+    <div class="itemsweetcard hidden" id="card3">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitsw3.png" alt="">
+          <img class="picture2" src="images/imitsw3.1.png" alt="">
+          <img class="picture2" src="images/imitsw3.2.png" alt="">
+        </div>
+        <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+        </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Леденец <br>на палочке,<br> в ассортименте</div>
+        <div class="options">
+          <p class="vkus">вкус:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FF3E91;"></div>
+            <div class="colour2" style="background-color: #3423E9;"></div>
+            <div class="colour3" style="background-color: #FFD214;"></div>
+          </div>
+        </div>
+        <div class="languages">
+          <p class="lang">язык:</p>
+          <select class="" name="type">
+            <option value="английский">английский</option>
+            <option value="русский">русский</option>
+            <option value="французский">французский</option>
+            <option value="немецкий">немецкий</option>
+            <option value="китайский">китайский</option>
+            <option value="японский">японский</option>
+            <option value="итальянский">итальянский</option>
+            <option value="турецкий">турецкий</option>
+            <option value="вьетнамский">вьетнамский</option>
+            <option value="испанский">испанский</option>
+          </select>
+        </div>
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Калорийность:	375 <br>
+            Углеводы на 100 г, г:	97 <br>
+            Масса нетто, кг:	0.07 <br>
+            Ингредиенты:	вода, сахар, патока, лимонная кислота, натуральный краситель кармин, ароматизатор идентичный натуральному <br>
+            Размер, мм:	20 x 15 x 10</div>
+        </div>
+        <div class="priceincard">149₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="itemsweetcardoverlay hidden" id="overlay4">
+    <div class="itemsweetcard " id="card4">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitsw4.png" alt="">
+          <img class="picture2" src="images/imitsw4.1.png" alt="">
+        </div>
+        <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Леденцы, <br>в ассортименте</div>
+        <!-- <div class="options">
+          <p class="vkus">вкус:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FF3E91;"></div>
+            <div class="colour2" style="background-color: #3423E9;"></div>
+          </div>
+        </div> -->
+        <div class="languages" style="margin-top: 35px;">
+          <p class="lang">язык:</p>
+          <select class="" name="type">
+            <option value="английский">английский</option>
+            <option value="русский">русский</option>
+            <option value="французский">французский</option>
+            <option value="немецкий">немецкий</option>
+            <option value="китайский">китайский</option>
+            <option value="японский">японский</option>
+            <option value="итальянский">итальянский</option>
+            <option value="турецкий">турецкий</option>
+            <option value="вьетнамский">вьетнамский</option>
+            <option value="испанский">испанский</option>
+          </select>
+        </div>
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Размер (ДхШхВ): 11 x 9 x 2 см <br>
+Ингредиенты: Сахар, мальтозный сироп, патока, лимонная кислота, ароматизаторы (вишня, персик, черная смородина, яблоко, кола, мята, арбуз, тутти-фрутти, бекон, горчица, перец черный, кетчуп), красители пищевые натуральные (кармин, антоцианы, экстракт паприки)
+          </div>
+        </div>
+        <div class="priceincard">229₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="itemmerchcardoverlay hidden" id="overlay5">
+    <div class="itemmerchcard " id="card5">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitmrch1.png" alt="">
+          <!-- <img class="picture2" src="images/imitsw4.1.png" alt=""> -->
+        </div>
+        <!-- <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div> -->
+      </div>
+      <div class="textincard">
+        <div class="headline">Мини-сумка</div>
+        <!-- <div class="options">
+          <p class="vkus">вкус:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FF3E91;"></div>
+            <div class="colour2" style="background-color: #3423E9;"></div>
+          </div>
+        </div> -->
+        <!-- <div class="languages" style="margin-top: 35px;">
+          <p class="lang">язык:</p>
+          <select class="" name="type">
+            <option value="английский">английский</option>
+            <option value="русский">русский</option>
+            <option value="французский">французский</option>
+            <option value="немецкий">немецкий</option>
+            <option value="китайский">китайский</option>
+            <option value="японский">японский</option>
+            <option value="итальянский">итальянский</option>
+            <option value="турецкий">турецкий</option>
+            <option value="вьетнамский">вьетнамский</option>
+            <option value="испанский">испанский</option>
+          </select>
+        </div> -->
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Материал: канвас <br>
+Размер, см: 25 х 5 х 15
+          </div>
+        </div>
+        <div class="priceincard">600₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="itemmerchcardoverlay hidden" id="overlay6">
+    <div class="itemmerchcard hidden" id="card6">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitmrch2.png" alt="">
+          <img class="picture2" src="images/imitmrch2.1.png" alt="">
+        </div>
+        <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Чехол
+          <br>для телефона,
+          <br>в ассортименте
+        </div>
+        <div class="options">
+          <p class="vkus">цвет:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FFD214;"></div>
+            <div class="colour2" style="background-color: #FF3E91;"></div>
+          </div>
+        </div>
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Материал: силикон</div>
+        </div>
+        <div class="priceincard">500₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="itemmerchcardoverlay hidden" id="overlay7">
+    <div class="itemmerchcard hidden" id="card7">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitmrch3.png" alt="">
+          <!-- <img class="picture2" src="images/imitmrch2.1.png" alt=""> -->
+        </div>
+        <!-- <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div> -->
+      </div>
+      <div class="textincard">
+        <div class="headline">Блокнот</div>
+        <!-- <div class="options">
+          <p class="vkus">цвет:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #FFD214;"></div>
+            <div class="colour2" style="background-color: #FF3E91;"></div>
+          </div>
+        </div> -->
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Количество листов: 80 <br>
+          Разлиновка: нет <br>
+          Обложка: Твердая <br>
+          Материал обложки: картон <br>
+          Размер, см: 13 х 21 <br>
+          Плотность бумаги, г/м2: 140 <br>
+        </div>
+        </div>
+        <div class="priceincard">250₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="itemmerchcardoverlay hidden" id="overlay8">
+    <div class="itemmerchcard hidden" id="card8">
+      <svg class="closebutton"width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="35.3553" y1="35.3574" x2="14.1421" y2="14.1442" stroke-width="5" stroke-linecap="round"/>
+        <line x1="14.1421" y1="35.357" x2="35.3553" y2="14.1438" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="pictures">
+        <div class="swipepictures">
+          <img class="picture1" src="images/imitmrch4.png" alt="">
+          <img class="picture2" src="images/imitmrch4.1.png" alt="">
+          <img class="picture2" src="images/imitmrch4.2.png" alt="">
+        </div>
+        <div class="slidebuttons">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+        </div>
+      </div>
+      <div class="textincard">
+        <div class="headline">Леденец <br>на палочке,<br> в ассортименте</div>
+        <div class="options">
+          <p class="vkus">вкус:</p>
+          <div class="colorsoptions">
+            <div class="colour1" style="background-color: #4ACDFF;"></div>
+            <div class="colour2" style="background-color: #FFD214;"></div>
+            <div class="colour3" style="background-color: #FF3E91;"></div>
+          </div>
+        </div>
+        <!-- <div class="languages">
+          <p class="lang">язык:</p>
+          <select class="" name="type">
+            <option value="английский">английский</option>
+            <option value="русский">русский</option>
+            <option value="французский">французский</option>
+            <option value="немецкий">немецкий</option>
+            <option value="китайский">китайский</option>
+            <option value="японский">японский</option>
+            <option value="итальянский">итальянский</option>
+            <option value="турецкий">турецкий</option>
+            <option value="вьетнамский">вьетнамский</option>
+            <option value="испанский">испанский</option>
+          </select>
+        </div> -->
+        <div class="description">
+          <p class="characteristics">Характеристики</p>
+          <div class="descriptionmain">Состав: 80% гребенный хлопок (1 сорт), 15% ПА, 5% эластан <br>
+            Размер носков: 35-40 <br>
+            Сезон: Всесезонные <br>
+            Тип: Трикотажные <br>
+          </div>
+        </div>
+        <div class="priceincard">199₽</div>
+      </div>
+      <div class="buttoncart">
+        <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.28527 12.8276C0.683365 11.5034 1.65143 10 3.10601 10H30.894C32.3486 10 33.3166 11.5034 32.7147 12.8276L26.8056 25.8276C26.4811 26.5416 25.7692 27 24.9849 27H9.0151C8.23081 27 7.51891 26.5416 7.19437 25.8276L1.28527 12.8276Z" fill="white"/>
+          <path d="M13.9261 3.75879C13.049 3.75879 12.3379 3.04771 12.3379 2.17055V2.17055C12.3379 1.2934 13.049 0.582319 13.9261 0.582319L20.1972 0.582319C21.0743 0.582319 21.7854 1.2934 21.7854 2.17055V2.17055C21.7854 3.04771 21.0743 3.75879 20.1972 3.75879L13.9261 3.75879Z" fill="white"/>
+          <rect width="3.16892" height="18.1285" rx="1.58446" transform="matrix(0.865337 0.501191 -0.49881 0.866711 13.3359 0)" fill="white"/>
+          <rect width="3.16892" height="18.1299" rx="1.58446" transform="matrix(0.865337 -0.501191 0.49881 0.866711 18.2051 1.58691)" fill="white"/>
+        </svg>
+        <p>в корзину</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

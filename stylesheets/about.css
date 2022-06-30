@@ -1,0 +1,310 @@
+.headlinebuble {
+  position: relative;
+  left: 35px;
+  margin-top: 35px;
+}
+.textheadline {
+  position: absolute;
+  /* margin: 0 auto; */
+  margin-left: 35px;
+  margin-top: 18px;
+  text-align: center;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  display: block;
+  /* width: 80px;
+  height: 35px; */
+/*   margin-top: 109px; */
+/*   padding: 17px 40px 17px 40px; */
+  color: white;
+}
+/* .abouttext {
+  position: relative;
+  left: 35px;
+  margin-top: 17px;
+  padding-right: 35px;
+}
+.abouttextcontent {
+  position: absolute;
+  margin-left: 35px;
+  margin-top: 18px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  display: block;
+  color: black;
+  z-index: 1;
+}
+.abouttext > svg {
+  max-width: 100%;
+  min-height: 100%;
+} */
+
+.svgtest {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  left: 35px;
+  filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.12));
+  /* align-items: stretch; */
+}
+.rectangleborderround {
+  /* position: absolute; */
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  /* height: 70px; */
+  height: 100%
+  min-height: 70px;
+  border-radius: 35px;
+  background-color: white;
+  padding-right: 35px;
+  padding-bottom: 18px;
+}
+.svgtest svg {
+  position: absolute;
+  align-self: flex-end;
+  /* display: block; */
+  left: 0;
+  /* margin-top: 30px; */
+  z-index: -1;
+}
+.svgtesttext {
+  /* position: absolute; */
+  margin-left: 35px;
+  margin-top: 18px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  display: block;
+  color: black;
+  z-index: 1;
+}
+
+.abouttext {
+  position: relative;
+  margin-top: 17px;
+  display: flex;
+  left: 35px;
+  filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.12));
+  /* align-items: stretch; */
+}
+.abouttextbuble {
+  /* position: absolute; */
+  display: block;
+  width: 100%;
+  /* max-width: 1000px; */
+  /* height: 70px; */
+  height: 100%;
+  min-height: 70px;
+  border-radius: 35px;
+  background-color: white;
+  padding-right: 35px;
+  padding-bottom: 18px;
+}
+#aboutdoyouspeak {
+  max-width: 614px;
+}
+#aboutgame {
+  max-width: 577px;
+}
+#aboutbuilding {
+  max-width: 685px;
+}
+#aboutbook {
+  max-width: 505px;
+}
+#aboutaddress {
+  max-width: 445px;
+}
+.abouttext svg {
+  position: absolute;
+  align-self: flex-end;
+  /* display: block; */
+  left: 0;
+  /* margin-top: 30px; */
+  z-index: -1;
+}
+.abouttextcontent {
+  /* position: absolute; */
+  margin-left: 35px;
+  margin-top: 18px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  display: block;
+  color: black;
+  z-index: 1;
+}
+.building {
+  position: relative;
+  margin-top: 17px;
+  left: 35px;
+}
+.building img {
+  width: 100%;
+  max-width: 454px;
+  border-radius: 20px;
+}
+.book {
+  position: relative;
+  margin-top: 60px;
+  left: 35px;
+}
+.book img {
+  width: 100%;
+  max-width: 347px;
+}
+.cardsgame {
+  position: relative;
+  margin-top: 17px;
+  left: 35px;
+}
+.cardsgame img {
+  width: 100%;
+  max-width: 878px;
+}
+.buildingimages {
+  position: relative;
+  margin-top: 17px;
+  left: 35px;
+  width: 100%;
+  max-width: 913px;
+  height: 100%;
+  min-height: 469px;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.12));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 17px;
+  padding: 17px;
+}
+.buildingimages img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+.buttonplay {
+  position: relative;
+  left: 35px;
+  top: 17px;
+}
+.buttonplay > svg:hover {
+  cursor: pointer;
+}
+.textinbutton {
+  position: absolute;
+  /* margin: 0 auto; */
+  margin-left: 35px;
+  margin-top: 18px;
+  text-align: center;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  display: block;
+  /* width: 80px;
+  height: 35px; */
+/*   margin-top: 109px; */
+/*   padding: 17px 40px 17px 40px; */
+  color: white;
+}
+
+
+.bookpages {
+  position: relative;
+  margin-top: 35px;
+  left: 35px;
+  display: flex;
+  justify-content: flex-start;
+}
+.bookpagesimage {
+  width: 100%;
+  max-width: 615px;
+  height: 384px;
+  /* background-color: white; */
+  border-radius: 20px 0px 20px 20px;
+  box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.12);
+}
+.bookpagesimage img {
+  width: 100%;
+  /* max-width: 615px; */
+  height: 100%;
+  object-fit: scale-down;
+  border-radius: 20px 0px 20px 20px;
+}
+.bookmarks {
+  width: 100%;
+  max-width: 70px;
+  height: 384px;
+}
+.bookmarks > * {
+  /* width: 70px; */
+  height: 70px;
+  border-radius: 0px 20px 20px 0px;
+  /* background-color: pink; */
+}
+.bookmark1 {
+  width: 70px;
+  background-color: #FFD214;
+}
+.bookmark2 {
+  width: 35px;
+  background-color: #FF3E91;
+}
+.bookmark3 {
+  width: 35px;
+  background-color: #3423E9;
+}
+.bookmark4 {
+  width: 35px;
+  background-color: #4ACDFF;
+}
+.bookmark5 {
+  width: 35px;
+  background-color: #D47B2D;
+}
+.bookmark1:hover {
+  cursor: pointer;
+  width: 70px;
+  transition: .3s;
+}
+.bookmark2:hover {
+  cursor: pointer;
+  width: 70px;
+  transition: .3s;
+}
+.bookmark3:hover {
+  cursor: pointer;
+  width: 70px;
+  transition: .3s;
+}
+.bookmark4:hover {
+  cursor: pointer;
+  width: 70px;
+  transition: .3s;
+}
+.bookmark5:hover {
+  cursor: pointer;
+  width: 70px;
+  transition: .3s;
+}
