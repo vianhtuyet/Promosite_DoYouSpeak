@@ -1,0 +1,236 @@
+@media only screen and (max-width: 580px) {
+  /* events.html */
+  .folders {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* about.html */
+  .buildingimages {
+    max-width: 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  input[type="text"], input[type="email"] {
+    max-width: 350px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* about.html */
+  #about, #catalogue, #events, #contacts, .shoppingcart {
+   display: none;
+  }
+  /* items.html */
+  .menu-responsive {
+   display: block;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* items.html */
+  .sweet-items, .merch-items {
+    position: relative;
+    margin-top: 35px;
+    margin: 35px auto;
+    width: calc(100% - 70px);
+    display: grid;
+  /*   grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    display: grid;
+    grid-gap: 35px;
+  }
+  .im1 {
+    height: 433px;
+    width: auto;
+    /* width: 100%; */
+  /*   width: 901px; */
+    border-radius: 20px;
+    /* background-color: grey; */
+    grid-column: 1 / span 2;
+  /*   grid-column-start: 1;
+    grid-column-end: 2; */
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-image: url('../images/sweetitemimage.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: 100% auto; */
+    /* object-fit: cover; */
+    background-size: cover;
+    display: block;
+  }
+  .im2 {
+    height: 433px;
+    width: auto;
+  /*   width: 901px; */
+    border-radius: 20px;
+    /* background-color: grey; */
+    grid-column: 1 / span 2;
+  /*   grid-column-start: 1;
+    grid-column-end: 2; */
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-image: url('../images/merchitemimage.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: 100% auto; */
+    /* object-fit: cover; */
+    background-size: cover;
+    display: block;
+  }
+  #itsw1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itsw2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itsw3 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  #itsw4 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  #itmrch1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itmrch2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itmrch3 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  #itmrch4 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+  /* items.html */
+  .sweet-items, .merch-items {
+    position: relative;
+    margin-top: 35px;
+    margin: 35px auto;
+    width: calc(100% - 70px);
+    display: grid;
+  /*   grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    display: grid;
+    grid-gap: 35px;
+  }
+  .im1 {
+    height: 866px;
+    width: auto;
+    /* width: 100%; */
+  /*   width: 901px; */
+    border-radius: 20px;
+    /* background-color: grey; */
+    grid-column: 1 / span 2;
+  /*   grid-column-start: 1;
+    grid-column-end: 2; */
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-image: url('../images/sweetitemimageresponsivephone.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: 100% auto; */
+    /* object-fit: cover; */
+    background-size: contain;
+    display: block;
+  }
+  .im2 {
+    height: 866px;
+    width: auto;
+  /*   width: 901px; */
+    border-radius: 20px;
+    /* background-color: grey; */
+    grid-column: 1 / span 2;
+  /*   grid-column-start: 1;
+    grid-column-end: 2; */
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-image: url('../images/merchitemimageresponsivephone.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: 100% auto; */
+    /* object-fit: cover; */
+    background-size: contain;
+    display: block;
+  }
+  #itsw1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itsw2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itsw3 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  #itsw4 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  #itmrch1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itmrch2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #itmrch3 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  #itmrch4 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+}
